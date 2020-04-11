@@ -1,0 +1,36 @@
+<!--pages/demo/demo.wxml weixin html -->
+<view>
+  hello
+  10+20
+</view>
+<view>支持表达式语法:{{ 10+20 }}</view>
+<view>支持表达式语法:{{ 10>20?'aaa':'bbb' }}</view>
+<view>支持变量:{{ mytext }}</view>
+<button bindtap="handleKerwinTap">click</button>
+
+<view class="todolist">
+  <input bindinput="handleInput" value="{{mytext}}"/>
+  <button size="mini" bindtap="handleAdd">add</button>
+</view>
+<!-- v-for="(kerwinitem,kerwinindex) in list" -->
+<view wx:for="{{list}}" wx:key="kerwinitem" wx:for-item="kerwinitem" wx:for-index="kerwinindex">
+    {{kerwinitem}}---{{kerwinindex}}
+    <!-- 遵循html5标准
+        <div data-anyid="1111"></div>
+        odiv.onclick = function(ev){
+          //getAttribute
+          console.log(ev.target.dataset.anyid) 
+        }
+     -->
+    <button size="mini" bindtap="handleDelTap" data-index="{{kerwinindex}}">del</button>
+</view>
+<view>点击变色</view>
+<view wx:for="{{list}}" bindtap="handleChangeTap" 
+data-aaa="{{index}}" wx:key="index" class="{{current===index?'active':''}}">
+    <view>
+     <text>{{item}}</text>
+    </view>
+</view>
+<button bindtap="handleCreted">创建/删除</button>
+<view wx:if="{{isCreated}}">我是动态创建和删除</view>
+<view hidden="{{isShow}}">我是动态隐藏和显示</view>

@@ -1,0 +1,12 @@
+/* pages/demo/demo.wxss */
+input {
+  border:1px solid black;
+}
+
+.todolist{
+  display: flex;
+}
+
+.active {
+  background-color: red;
+}

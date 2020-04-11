@@ -1,0 +1,16 @@
+/* pages/home/home.wxss */
+swiper{
+  height: 300rpx;
+}
+swiper-item image{
+  width: 100%;
+}
+/* 大部分css是可以使用的 */
+.list{
+  overflow: hidden;
+  padding: 5px;
+}
+.list image{
+  float:left;
+  width:200rpx;
+}
