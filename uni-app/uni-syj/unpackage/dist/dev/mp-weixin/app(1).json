@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/shopcar/shopcar",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/center/center",
+    "pages/detail/detail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "测试",
+        "iconPath": "./static/images/camera.png",
+        "selectedIconPath": "./static/images/camera_light.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./static/images/home.png",
+        "selectedIconPath": "./static/images/home_light.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "./static/images/search.png",
+        "selectedIconPath": "./static/images/search_light.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "./static/images/my.png",
+        "selectedIconPath": "./static/images/my_light.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap55.json"
+}

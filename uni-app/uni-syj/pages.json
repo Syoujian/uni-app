@@ -1,0 +1,71 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/shopcar/shopcar",
+		    "style": {
+		    	"navigationBarTitleText": "购物车"
+		    }
+		}
+		,
+		
+		{
+		    "path" : "pages/home/home",
+		    "style": {
+		    	"navigationBarTitleText": "首页",
+				"enablePullDownRefresh":true
+		    }
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "测试"
+			}
+		}
+        ,{
+            "path" : "pages/center/center",
+            "style": {
+            	"navigationBarTitleText": "个人"
+            }
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"navigationBarTitleText": "详情页面"
+			}  
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	 "tabBar": {
+	    "list": [
+	      {
+	        "pagePath": "pages/index/index",
+	        "text": "测试",
+	        "iconPath": "./static/images/camera.png",
+	        "selectedIconPath": "./static/images/camera_light.png"
+	      },
+	      {
+	        "pagePath": "pages/home/home",
+	        "text": "首页",
+	        "iconPath": "./static/images/home.png",
+	        "selectedIconPath": "./static/images/home_light.png"
+	      },
+	      {
+	        "pagePath": "pages/shopcar/shopcar",
+	        "text": "购物车",
+	        "iconPath": "./static/images/search.png",
+	        "selectedIconPath": "./static/images/search_light.png"
+	      },
+	      {
+	        "pagePath": "pages/center/center",
+	        "text": "我的",
+	        "iconPath": "./static/images/my.png",
+	        "selectedIconPath": "./static/images/my_light.png"
+	      }
+	    ]
+	  }
+}
