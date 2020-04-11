@@ -1,0 +1,7 @@
+/* pages/center/center.wxss */
+
+image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}

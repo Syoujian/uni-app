@@ -1,0 +1,19 @@
+/* pages/shopcar/shopcar.wxss */
+.shopcar{
+  display: flex;
+  padding: 5px;
+}
+
+.shopcar image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.step{
+  display: flex;
+}
+
+.step input {
+  width: 100rpx;
+  text-align: center;
+}

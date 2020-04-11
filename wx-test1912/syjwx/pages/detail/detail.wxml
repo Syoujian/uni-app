@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<swiper>
+  <swiper-item wx:for="{{goodInfo.slides}}" wx:key="index">
+      <image src="{{'http://localhost:3000'+item}}" mode="widthFix" bindtap="handlePreview" data-url="{{'http://localhost:3000'+item}}"></image>
+  </swiper-item>
+</swiper>
+<view>
+  {{goodInfo.name}}
+</view>
+<view style="color:red;">
+  {{goodInfo.price}}
+</view>
+<view>
+  {{goodInfo.feature}}
+</view>
+<button bindtap="handleAddCart">加入购物车</button>
+<button bindtap="handleChangeCart">跳转购物车</button>

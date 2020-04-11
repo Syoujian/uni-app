@@ -1,0 +1,12 @@
+<!--pages/center/center.wxml-->
+<view wx:if="{{!users}}">
+  <button open-type="getUserInfo" bindgetuserinfo="handleUserInfo">授权</button>
+</view>
+
+<view wx:else>
+  <view style="text-align:center">
+      <image src="{{users.avatarUrl}}" bindtap="handlePhoto"></image>
+  </view>
+  <view style="text-align:center">{{users.nickName}}</view>
+  <button bindtap="handleLocation">定位</button>
+</view>

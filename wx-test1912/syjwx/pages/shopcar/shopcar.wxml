@@ -1,0 +1,44 @@
+<!--pages/shopcar/shopcar.wxml-->
+<!-- var mymodule = require("./shopcar.wxs") -->
+<!-- 引入wxs文件 -->
+<wxs src="./shopcar.wxs" module="kerwinmodule"/>
+<view wx:if="{{!datalist.length}}" style="text-align:center;">
+   购物车空空如也
+</view>
+<view wx:else>
+    <view>
+    <checkbox-group bindchange="handleAllChecked">
+            <checkbox value="随便一个values" checked="{{ kerwinmodule.checked(datalist) }}"></checkbox>全选
+        </checkbox-group>
+    </view>
+    <view wx:for="{{datalist}}" wx:key="index" class="shopcar" bindlongtap="handleModal"
+    data-id="{{item.id}}" >
+        <!-- <checkbox-group bindchange="handleChange">
+            <checkbox value="{{item.id}}"></checkbox>
+        </checkbox-group> -->
+        <checkbox bindtap="handleChange" data-id="{{item.id}}" 
+        checked="{{item.checked}}"></checkbox>
+
+        <image src="{{'http://localhost:3000'+item.good.poster}}"></image>
+        <view>
+            <view>{{item.good.name}}</view>
+            <view style="color:red;">{{item.good.price}}</view>
+            <view class="step">
+                <text bindtap="handleMinus" data-id="{{item.id}}">-</text>
+                <input value="{{item.number}}" disabled></input>
+                <text bindtap="handleAdd" data-id="{{item.id}}">+</text>
+            </view>
+        </view>
+
+    </view>
+
+    <view>
+        <!-- 小程序中如果在js,中定义一个函数, {{不支持 函数调用方法}} -->
+        总金额:{{kerwinmodule.total(datalist)}}
+        <!-- 需要学习.wxs 小程序自带语法, 定义一个函数 {{支持 函数调用方法}}  -->
+    </view>
+
+    <view>
+        <button bindtap="handlePay">立即支付</button>
+    </view>
+</view>

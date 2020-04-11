@@ -1,0 +1,28 @@
+var total = function(datalist){
+  var sum = 0;
+  datalist.forEach(function(item){
+    if(item.checked){
+      sum+= item.good.price*item.number
+    }
+  })
+  return sum
+}
+
+function checked(datalist){
+  // 判断datalist每个checked值,如果都是true,返回true, 只要有一个不是true,返回false
+  // every es5 
+  if(datalist.length===0) {
+    return false
+  }
+
+  var isChecked = datalist.every(function(item){
+    return item.checked
+  })
+  // datalist.some() 只要有一个满足，返回true， 所有的都不满足，会返回false
+  return isChecked
+}
+//commonJS规范导出
+module.exports = {
+  total:total,
+  checked:checked
+}
